@@ -14,7 +14,7 @@ def menu():
 def conect_bd():
     global cursor
     global conexao
-    conexao = psycopg2.connect (host='127.0.0.1', database='estapark',user='postgres',password='1804')
+    conexao = psycopg2.connect (host='127.0.0.1', database='estapark',user='postgres',password='xxxx')
     cursor = conexao.cursor()
 
 
@@ -27,7 +27,7 @@ def data_hora():
     hora_entrada = date.strftime('%H:%M')
 
 
-
+#recibo entrada
 def text_padrao_entrada():
     data_hora()
     os.system('cls')
@@ -42,7 +42,7 @@ def text_padrao_entrada():
         '\n OBRIGADO PELA PREFERENCIA, VOLTE SEMPRE!',)
 
 
-
+#recibo saida
 def text_padrao_saida():
     data_hora()
     os.system('cls')
@@ -97,7 +97,6 @@ def salvarbd():
     cursor.execute(insert)
     conexao.commit()
     conexao.close()
-    print('deu certo')
 
 
 resposta_menu = 4
