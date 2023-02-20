@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+        <div class="box">
+            <h1>GERADOR DE SENHA!</h1>
+            <p>Para gerar uma senha, informe abaixo o numero de caracteres que deseja, e pressione em "gerar".</p>
+            <div id='lab'>
+                <label>numero de caracteres: </label>                
+                <form action="{{ url_for('login') }}" method="POST" >
+                    <input type="int" placeholder="Número inteiro" name="num"> 
+                    <p>Sua senha: {{ name }}</p>
+                    <button type="submit">Gerar!</button>
+
+                </form>
+
+            </div> 
+        </div>
+        </div>
+    </body>
+    </html>
+    
+    
+    <!-- <select action="{{ url_for('login') }}" method="post" numero="num">
+        <option>1
+        <option>2
+        <option>3
+        <option>4
+        <option>5
+        <option>6
+        <option>7
+        <option>8
+        <option>9
+        <option>10              
+    </select> -->
